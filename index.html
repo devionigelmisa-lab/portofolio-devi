@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Devioni Gelmisa Damanik</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 font-sans text-[#2E75B1] min-h-screen flex flex-col justify-between m-0 p-0">
+
+    <!-- MAIN CONTAINER -->
+    <main class="w-full min-h-screen flex flex-col">
+
+        <!-- 1. TAB NAVIGATION -->
+        <nav class="bg-[#9BBED2] p-3.5 w-full flex flex-wrap justify-center gap-2 text-sm md:text-base font-medium shadow-md sticky top-0 z-50 px-6 md:px-12">
+            <button onclick="switchTab('home')" id="tab-home" class="tab-btn bg-white text-[#163A6A] px-5 py-2.5 rounded-xl transition font-bold shadow-sm">
+                <i class="fa-solid fa-house mr-1.5"></i> Home
+            </button>
+            <button onclick="switchTab('about')" id="tab-about" class="tab-btn text-[#163A6A] hover:bg-white/40 px-5 py-2.5 rounded-xl transition font-semibold">
+                <i class="fa-solid fa-user mr-1.5"></i> About
+            </button>
+            <button onclick="switchTab('education')" id="tab-education" class="tab-btn text-[#163A6A] hover:bg-white/40 px-5 py-2.5 rounded-xl transition font-semibold">
+                <i class="fa-solid fa-graduation-cap mr-1.5"></i> Studi
+            </button>
+            <button onclick="switchTab('experience')" id="tab-experience" class="tab-btn text-[#163A6A] hover:bg-white/40 px-5 py-2.5 rounded-xl transition font-semibold">
+                <i class="fa-solid fa-briefcase mr-1.5"></i> Pengalaman
+            </button>
+            <button onclick="switchTab('skills')" id="tab-skills" class="tab-btn text-[#163A6A] hover:bg-white/40 px-5 py-2.5 rounded-xl transition font-semibold">
+                <i class="fa-solid fa-palette mr-1.5"></i> Skills
+            </button>
+            <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn text-[#163A6A] hover:bg-white/40 px-5 py-2.5 rounded-xl transition font-semibold">
+                <i class="fa-solid fa-envelope mr-1.5"></i> Contact
+            </button>
+            <a href="project.html" class="bg-[#163A6A] text-white font-bold px-5 py-2.5 rounded-xl hover:bg-[#2E75B1] transition flex items-center shadow-sm">
+                <i class="fa-solid fa-calculator mr-1.5"></i> Tugas JS
+            </a>
+        </nav>
+
+        <!-- 2. AREA KONTEN TAB -->
+        <section class="bg-white w-full flex-1 px-6 md:px-16 py-10 shadow-sm">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- TAB 1: HOME -->
+                <div id="content-home" class="tab-content text-center space-y-8">
+
+                    <!-- A. HEADER SELAMAT DATANG -->
+                    <div class="bg-white w-full border-b border-[#9BBED2]/40 pb-6 text-center">
+                        <div class="max-w-4xl mx-auto space-y-4">
+                            <h1 class="text-4xl md:text-5xl font-extrabold text-[#163A6A]">
+                                Selamat Datang di Portofolio Saya!
+                            </h1>
+                            <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                                Jelajahi tab navigasi di atas untuk melihat latar belakang pendidikan, keahlian desain & editing, pengalaman organisasi saya di GenBI, serta simulasi fitur interaktif JavaScript.
+                            </p>
+                            <div class="flex flex-wrap gap-4 justify-center pt-3">
+                                <button onclick="switchTab('skills')" class="bg-[#2E75B1] text-white text-base font-bold px-7 py-3 rounded-xl hover:bg-[#163A6A] transition shadow-sm">
+                                    Lihat Keahlian & Software
+                                </button>
+                                <a href="project.html" class="bg-[#163A6A] text-white text-base font-bold px-7 py-3 rounded-xl hover:bg-[#2E75B1] transition shadow-sm">
+                                    Buka Tugas JavaScript
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B. BIODATA FOTO PROFIL -->
+                    <div class="bg-slate-50 w-full border border-[#9BBED2]/40 p-6 md:p-8 rounded-2xl text-center shadow-sm">
+                        <div class="max-w-3xl mx-auto flex flex-col items-center gap-5">
+                            <img src="assets/fotoprofil.jpeg" alt="Foto Devioni" class="w-56 h-64 object-cover rounded-2xl border-4 border-[#9BBED2] shadow-md">
+
+                            <div class="space-y-2.5">
+                                <h2 class="text-3xl md:text-4xl font-extrabold text-[#163A6A]">Devioni Gelmisa Damanik</h2>
+                                <p class="text-[#2E75B1] font-semibold text-lg md:text-xl">Mahasiswa S1 Ilmu Komputer | Graphic Designer & Editor</p>
+                                <p class="text-sm md:text-base text-gray-500">Universitas Pendidikan Ganesha</p>
+                                <p class="text-base md:text-lg text-gray-700 leading-relaxed pt-4 border-t border-gray-200 max-w-2xl mx-auto">
+                                    Halo! Saya mahasiswi Ilmu Komputer yang berfokus pada web development responsif. Saya menggabungkan kreativitas desain grafis dan video editing dengan logika kode untuk menciptakan pengalaman web yang menarik.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- TAB 2: ABOUT ME -->
+                <div id="content-about" class="tab-content hidden space-y-8">
+
+                    <!-- 1. JUDUL & FOTO PROFIL -->
+                    <div class="text-center">
+                        <h3 class="font-bold text-2xl md:text-3xl text-[#163A6A] border-b border-[#9BBED2]/40 pb-3">Tentang Saya</h3>
+                        <div class="flex justify-center my-6">
+                            <img src="assets/fotoprofil.jpeg" alt="Foto Devioni" class="w-56 h-56 object-cover rounded-full border-4 border-[#9BBED2] shadow-md">
+                        </div>
+                    </div>
+
+                    <!-- 2. DATA DIRI -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base bg-slate-50 p-6 md:p-8 rounded-2xl border border-gray-200 text-left max-w-3xl mx-auto">
+                        <div class="space-y-3.5">
+                            <p><span class="font-bold text-[#163A6A]">Nama Lengkap:</span> Devioni Gelmisa Damanik</p>
+                            <p><span class="font-bold text-[#163A6A]">NIM:</span> 2415101027</p>
+                            <p><span class="font-bold text-[#163A6A]">Tempat, Tgl Lahir:</span> Raya, 11 Desember 2006</p>
+                        </div>
+                        <div class="space-y-3.5">
+                            <p><span class="font-bold text-[#163A6A]">Program Studi:</span> S1 Ilmu Komputer</p>
+                            <p><span class="font-bold text-[#163A6A]">Fokus Minat:</span> Web Design, Graphic Design & Video Editing</p>
+                            <p><span class="font-bold text-[#163A6A]">Status:</span> Mahasiswa Aktif Semester 5</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. DESKRIPSI -->
+                    <div class="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto text-left">
+                        <h4 class="font-bold text-xl text-[#163A6A] text-center">Deskripsi Singkat</h4>
+                        <p>
+                            Sebagai mahasiswi Ilmu Komputer, saya memadukan kemampuan komunikasi dan fleksibilitas untuk terus berkembang di dunia TI dan industri kreatif. Fokus utama saya adalah membangun tampilan front-end web yang intuitif dan nyaman digunakan.
+                        </p>
+                        <p>
+                            Di samping dunia coding, saya juga aktif memproduksi media visual, mulai dari desain poster, desain katalog, sampai editing video.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- TAB 3: STUDI -->
+                <div id="content-education" class="tab-content hidden text-center">
+                    <h3 class="font-bold text-2xl md:text-3xl text-[#163A6A] mb-8 border-b border-[#9BBED2]/40 pb-3">Riwayat Pendidikan</h3>
+
+                    <div class="relative border-l-2 border-[#9BBED2] ml-4 md:ml-auto md:mr-auto space-y-8 max-w-2xl text-left">
+                        <!-- SD -->
+                        <div class="relative pl-6 md:pl-10">
+                            <span class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#2E75B1] border-4 border-white"></span>
+                            <div class="flex items-center gap-5 bg-slate-50 p-6 rounded-2xl border border-gray-200">
+                                <img src="assets/logo-sd.jpg" alt="Logo SD" class="w-16 h-16 object-contain shrink-0" onerror="this.src='https://via.placeholder.com/64?text=SD'">
+                                <div>
+                                    <h4 class="font-bold text-lg md:text-xl text-[#163A6A]">SD Negeri 091318 Pem. Raya</h4>
+                                    <p class="text-sm md:text-base text-[#2E75B1] font-semibold">(2012 - 2018)</p>
+                                    <p class="text-sm md:text-base text-gray-600">Sekolah Dasar | Kecamatan Raya</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SMP -->
+                        <div class="relative pl-6 md:pl-10">
+                            <span class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#2E75B1] border-4 border-white"></span>
+                            <div class="flex items-center gap-5 bg-slate-50 p-6 rounded-2xl border border-gray-200">
+                                <img src="assets/logo-smp.png" alt="Logo SMP" class="w-16 h-16 object-contain shrink-0" onerror="this.src='https://via.placeholder.com/64?text=SMP'">
+                                <div>
+                                    <h4 class="font-bold text-lg md:text-xl text-[#163A6A]">SMP Negeri 1 Raya</h4>
+                                    <p class="text-sm md:text-base text-[#2E75B1] font-semibold">(2018 - 2021)</p>
+                                    <p class="text-sm md:text-base text-gray-600">Sekolah Menengah Pertama | Kecamatan Raya</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SMA -->
+                        <div class="relative pl-6 md:pl-10">
+                            <span class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#2E75B1] border-4 border-white"></span>
+                            <div class="flex items-center gap-5 bg-slate-50 p-6 rounded-2xl border border-gray-200">
+                                <img src="assets/logo-sma.jpe" alt="Logo SMA" class="w-16 h-16 object-contain shrink-0" onerror="this.src='https://via.placeholder.com/64?text=SMA'">
+                                <div>
+                                    <h4 class="font-bold text-lg md:text-xl text-[#163A6A]">SMA Negeri 1 Raya</h4>
+                                    <p class="text-sm md:text-base text-[#2E75B1] font-semibold">(2021 - 2024)</p>
+                                    <p class="text-sm md:text-base text-gray-600">Sekolah Menengah Atas | Kecamatan Raya</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UNIVERSITAS -->
+                        <div class="relative pl-6 md:pl-10">
+                            <span class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#163A6A] border-4 border-white"></span>
+                            <div class="flex items-center gap-5 bg-[#9BBED2]/20 p-6 rounded-2xl border border-[#9BBED2]">
+                                <img src="assets/logo-undiksha.png" alt="Logo Undiksha" class="w-16 h-16 object-contain shrink-0" onerror="this.src='https://via.placeholder.com/64?text=UNDIKSHA'">
+                                <div>
+                                    <h4 class="font-bold text-lg md:text-xl text-[#163A6A]">Universitas Pendidikan Ganesha</h4>
+                                    <p class="text-sm md:text-base text-[#2E75B1] font-semibold">(2024 - Sekarang)</p>
+                                    <p class="text-sm md:text-base text-[#2E75B1] font-semibold">S1 Ilmu Komputer | Singaraja, Bali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: PENGALAMAN -->
+                <div id="content-experience" class="tab-content hidden text-center">
+                    <h3 class="font-bold text-2xl md:text-3xl text-[#163A6A] mb-6 border-b border-[#9BBED2]/40 pb-3">Pengalaman & Organisasi</h3>
+
+                    <div class="flex flex-col items-center p-6 md:p-8 bg-slate-50 rounded-2xl border border-gray-200 max-w-3xl mx-auto space-y-4">
+                        <img src="assets/logo-genbi.jpg" alt="Logo GenBI" class="w-40 h-40 object-contain shrink-0" onerror="this.src='https://via.placeholder.com/160?text=GenBI'">
+                        <div class="space-y-2 text-center">
+                            <h4 class="font-bold text-xl md:text-2xl text-[#163A6A]">Generasi Baru Indonesia (GenBI)</h4>
+                            <p class="text-base font-semibold text-[#2E75B1]">Anggota / Penerima Beasiswa Bank Indonesia</p>
+                            <p class="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto pt-1">
+                                Sebagai Anggota GenBI Bali dan Anggota Divisi Medkomvis GenBI Komisariat UNDIKSHA. Tak hanya sebagai penerima beasiswa tetapi juga sebagai perpanjangan tangan Bank Indonesia dengan aktif berpartisipasi dalam berbagai program kerja sosial dan edukasi kebanksentralan.
+                            </p>
+                        </div>
+
+                        <!-- DOKUMENTASI GENBI -->
+                        <div class="w-full mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-sm font-bold text-[#163A6A] mb-3 text-center">GenBI Bali (Mei 2026-Sekarang):</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <img src="assets/genbi-1.jpeg" alt="Dokumentasi GenBI 1" class="w-full h-42 object-cover rounded-xl border border-gray-200 shadow-sm">
+                                <img src="assets/genbi-2.jpeg" alt="Dokumentasi GenBI 2" class="w-full h-42 object-cover rounded-xl border border-gray-200 shadow-sm">
+                                <img src="assets/genbi-3.jpeg" alt="Dokumentasi GenBI 3" class="w-full h-42 object-cover rounded-xl border border-gray-200 shadow-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB SKILLS -->
+                <div id="content-skills" class="tab-content hidden text-center">
+                    <h3 class="font-bold text-2xl md:text-3xl text-[#163A6A] mb-3 border-b border-[#9BBED2]/40 pb-3">Keahlian & Software</h3>
+                    <p class="text-base text-gray-600 mb-8 max-w-2xl mx-auto">Selain fokus di pengembangan web, saya juga aktif memproduksi konten visual. Untuk mendukung alur kerja kreatif saya, berikut tools andalan yang sering saya gunakan:</p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+                        <!-- Canva -->
+                        <div class="p-6 rounded-2xl border border-gray-200 bg-slate-50 hover:border-[#2E75B1] hover:shadow-md transition duration-300 flex flex-col items-center justify-center space-y-3">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="assets/logo-canva.jpe" alt="Canva Logo" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/80?text=Canva'">
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg text-[#163A6A]">Canva</p>
+                                <span class="text-sm text-gray-500 block mt-1">Poster Design</span>
+                            </div>
+                        </div>
+
+                        <!-- CorelDRAW -->
+                        <div class="p-6 rounded-2xl border border-gray-200 bg-slate-50 hover:border-[#2E75B1] hover:shadow-md transition duration-300 flex flex-col items-center justify-center space-y-3">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="assets/logo-coreldraw.png" alt="CorelDRAW Logo" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/80?text=Corel'">
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg text-[#163A6A]">CorelDRAW</p>
+                                <span class="text-sm text-gray-500 block mt-1">Catalog Design</span>
+                            </div>
+                        </div>
+
+                        <!-- Alight Motion -->
+                        <div class="p-6 rounded-2xl border border-gray-200 bg-slate-50 hover:border-[#2E75B1] hover:shadow-md transition duration-300 flex flex-col items-center justify-center space-y-3">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="assets/logo-alightmotion.png" alt="Alight Motion Logo" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/80?text=AM'">
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg text-[#163A6A]">Alight Motion</p>
+                                <span class="text-sm text-gray-500 block mt-1">Video Transition</span>
+                            </div>
+                        </div>
+
+                        <!-- CapCut -->
+                        <div class="p-6 rounded-2xl border border-gray-200 bg-slate-50 hover:border-[#2E75B1] hover:shadow-md transition duration-300 flex flex-col items-center justify-center space-y-3">
+                            <div class="w-16 h-16 flex items-center justify-center">
+                                <img src="assets/logo-capcut.png" alt="CapCut Logo" class="max-h-full max-w-full object-contain" onerror="this.src='https://via.placeholder.com/80?text=CapCut'">
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg text-[#163A6A]">CapCut</p>
+                                <span class="text-sm text-gray-500 block mt-1">Video Editing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SHOWCASE HASIL KARYA / DOKUMENTASI EDITAN -->
+                    <div class="mt-10 pt-6 border-t border-gray-200 text-center">
+                        <h4 class="font-bold text-xl text-[#163A6A] mb-2">Galeri Hasil Karya & Editan</h4>
+                        <p class="text-sm text-gray-600 mb-6 max-w-xl mx-auto">Beberapa dokumentasi hasil desain poster, desain katalog, video transisi dan cuplikan video editing yang pernah saya buat:</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                            <!-- Karya Canva -->
+                            <div class="bg-slate-50 p-3 rounded-2xl border border-gray-200 shadow-sm space-y-2">
+                                <img src="assets/karya-canva.jpeg" alt="Hasil Desain Canva" class="w-56 h-56 object-contain shrink-0 mx-auto rounded-xl border border-gray-200" onerror="this.src='https://via.placeholder.com/200x160?text=Poster+Canva'">
+                                <p class="font-bold text-sm text-[#163A6A]">Desain Poster</p>
+                                <span class="text-xs text-[#2E75B1] font-semibold block">Dibuat via Canva</span>
+                            </div>
+
+                            <!-- Karya CorelDRAW -->
+                            <div class="bg-slate-50 p-3 rounded-2xl border border-gray-200 shadow-sm space-y-2">
+                                <img src="assets/karya-corel.jpg" alt="Hasil Desain CorelDRAW" class="w-56 h-56 object-contain shrink-0 mx-auto rounded-xl border border-gray-200" onerror="this.src='https://via.placeholder.com/200x160?text=Vector+Corel'">
+                                <p class="font-bold text-sm text-[#163A6A]">Desain Katalog</p>
+                                <span class="text-xs text-[#2E75B1] font-semibold block">Dibuat via CorelDRAW</span>
+                            </div>
+
+                            <!-- Karya Alight Motion -->
+                            <div class="bg-slate-50 p-3 rounded-2xl border border-gray-200 shadow-sm space-y-2">
+                                <img src="assets/karya-alightmotion.jpeg" alt="Hasil Motion Graphic" class="w-56 h-56 object-contain shrink-0 mx-auto rounded-xl border border-gray-200" onerror="this.src='https://via.placeholder.com/200x160?text=Motion+Graphic'">
+                                <p class="font-bold text-sm text-[#163A6A]">Editing Video/Foto Transisi</p>
+                                <span class="text-xs text-[#2E75B1] font-semibold block">Dibuat via Alight Motion</span>
+                            </div>
+
+                            <!-- Karya CapCut -->
+                            <div class="bg-slate-50 p-3 rounded-2xl border border-gray-200 shadow-sm space-y-2">
+                                <img src="assets/karya-capcut.jpeg" alt="Hasil Video CapCut" class="w-56 h-56 object-contain shrink-0 mx-auto rounded-xl border border-gray-200" onerror="this.src='https://via.placeholder.com/200x160?text=Video+Editing'">
+                                <p class="font-bold text-sm text-[#163A6A]">Video Short / Reels</p>
+                                <span class="text-xs text-[#2E75B1] font-semibold block">Dibuat via CapCut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB CONTACT (AKSI JAVASCRIPT FORM KIRIM PESAN) -->
+                <div id="content-contact" class="tab-content hidden space-y-6 text-center">
+                    <h3 class="font-bold text-2xl md:text-3xl text-[#163A6A] border-b border-[#9BBED2]/40 pb-3">Hubungi Saya</h3>
+                    <p class="text-base text-gray-600 max-w-xl mx-auto">Kirimkan pesan atau tawaran kerja sama melalui form interaktif di bawah ini:</p>
+
+                    <!-- FORM INTERAKTIF -->
+                    <form id="contactForm" onsubmit="kirimPesan(event)" class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-gray-200 max-w-xl mx-auto text-left space-y-4">
+                        <div>
+                            <label class="block font-bold text-[#163A6A] text-sm mb-1">Nama Lengkap:</label>
+                            <input type="text" id="senderName" required placeholder="Masukkan nama kamu" class="w-full p-3 border border-gray-300 rounded-xl bg-white text-gray-800 text-sm focus:outline-none focus:border-[#2E75B1]">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-[#163A6A] text-sm mb-1">Email:</label>
+                            <input type="email" id="senderEmail" required placeholder="nama@email.com" class="w-full p-3 border border-gray-300 rounded-xl bg-white text-gray-800 text-sm focus:outline-none focus:border-[#2E75B1]">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-[#163A6A] text-sm mb-1">Pesan:</label>
+                            <textarea id="senderMessage" required rows="3" placeholder="Tuliskan pesan kamu di sini..." class="w-full p-3 border border-gray-300 rounded-xl bg-white text-gray-800 text-sm focus:outline-none focus:border-[#2E75B1]"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#2E75B1] text-white font-bold py-3 rounded-xl hover:bg-[#163A6A] transition shadow-md text-base">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>Kirim Pesan
+                        </button>
+                    </form>
+
+                    <!-- NOTIFIKASI BALASAN JAVASCRIPT -->
+                    <div id="alertSuccess" class="hidden max-w-xl mx-auto p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-sm font-semibold">
+                        <i class="fa-solid fa-circle-check mr-2"></i><span id="alertText">Pesan berhasil terkirim!</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-[#9BBED2]/40 text-center py-4 text-sm text-gray-500 w-full">
+        <p>&copy; Copyright 2026 by Devioni Gelmisa Damanik</p>
+    </footer>
+
+    <!-- LOGIKA SWITCH TAB & AKSI CONTACT JAVASCRIPT -->
+    <script>
+        function switchTab(tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.className = 'tab-btn text-[#163A6A] hover:bg-white/40 px-5 py-2.5 rounded-xl transition font-semibold';
+            });
+
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+            document.getElementById('tab-' + tabName).className = 'tab-btn bg-white text-[#163A6A] px-5 py-2.5 rounded-xl transition font-bold shadow-sm';
+        }
+
+        // AKSI JAVASCRIPT UNTUK TAB CONTACT
+        function kirimPesan(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById('senderName').value;
+            const alertBox = document.getElementById('alertSuccess');
+            const alertText = document.getElementById('alertText');
+
+            alertText.innerText = `Halo ${nama}, terima kasih! Pesan kamu berhasil dikirim.`;
+            alertBox.classList.remove('hidden');
+
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+
+</html>
